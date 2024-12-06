@@ -1,0 +1,22 @@
+{
+    "name": "juszczyk/module-age-verification",
+    "version": "1.0.0",
+    "description": "N/A",
+    "type": "magento2-module",
+    "require": {
+        "juszczyk/module-base": ">=1.0.0",
+        "magento/framework": ">=103.0.4"
+    },
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Juszczyk\\AgeVerification\\": ""
+        }
+    }
+}
