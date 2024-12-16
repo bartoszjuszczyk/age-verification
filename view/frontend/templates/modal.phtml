@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * File: modal.phtml
+ *
+ * @author Bartosz Juszczyk <b.juszczyk@bjuszczyk.pl>
+ * @copyright Copyright (c) 2024.
+ **/
+
+use Juszczyk\AgeVerification\Block\Modal;
+use Magento\Framework\Escaper;
+
+/** @var Escaper $escaper */
+/** @var Modal $block */
+
+
+if ($block->canShowModal()):
+?>
+
+<div id="j_ageverification_modal" class="j-ageverification-modal">
+    <div class="modal-container">
+        <div class="modal-content">
+            <h1 class="modal-heading">
+                <?= $escaper->escapeHtml($block->getModalHeading()); ?>
+            </h1>
+            <p class="modal-description">
+                <?= $escaper->escapeHtml($block->getModalDescription()); ?>
+            </p>
+            <div class="modal-buttons">
+                <button id="j_agever_continue_btn" class="modal-continue-btn">
+                    <?= $escaper->escapeHtml($block->getContinueButtonText()); ?>
+                </button>
+                <button id="j_agever_back_btn" class="modal-back-btn">
+                    <?= $escaper->escapeHtml($block->getBackButtonText()); ?>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php endif; ?>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Juszczyk_AgeVerification/js/age-verification": {
+                "cookie_ttl": "<?= $block->getCookieTtl(); ?>"
+            }
+        }
+    }
+</script>

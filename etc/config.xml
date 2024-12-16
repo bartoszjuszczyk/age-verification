@@ -8,12 +8,12 @@
                 <verification_age>18</verification_age>
                 <cookie_ttl>86400</cookie_ttl>
             </general>
-            <appearence>
+            <appearance>
                 <heading>This site is for +18 only!</heading>
                 <description>Do you confirm that you are over 18 years old?</description>
                 <continue_button>Confirm, go to site</continue_button>
                 <back_button>No, go back</back_button>
-            </appearence>
+            </appearance>
         </juszczyk_age_verification>
     </default>
 </config>
