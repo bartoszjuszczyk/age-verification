@@ -92,6 +92,18 @@ class ConfigProvider implements ConfigProviderInterface
     /**
      * @inheritDoc
      */
+    public function getUsingCalendar(): bool
+    {
+        return $this->scopeConfig->isSetFlag(
+            self::XML_PATH_APPEARANCE_USING_CALENDAR,
+            ScopeInterface::SCOPE_STORE,
+            $this->storeManager->getStore()->getId()
+        );
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function getContinueButtonText(): ?string
     {
         return $this->scopeConfig->getValue(
