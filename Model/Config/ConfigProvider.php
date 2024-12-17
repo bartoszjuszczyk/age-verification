@@ -116,10 +116,22 @@ class ConfigProvider implements ConfigProviderInterface
     /**
      * @inheritDoc
      */
-    public function getDefaultCookiePath(): string
+    public function getDefaultCookiePath(): ?string
     {
         return $this->scopeConfig->getValue(
             Config::XML_PATH_COOKIE_PATH,
+            ScopeInterface::SCOPE_STORE,
+            $this->storeManager->getStore()->getId()
+        );
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getDefaultCookieDomain(): ?string
+    {
+        return $this->scopeConfig->getValue(
+            Config::XML_PATH_COOKIE_DOMAIN,
             ScopeInterface::SCOPE_STORE,
             $this->storeManager->getStore()->getId()
         );

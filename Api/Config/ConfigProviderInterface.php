@@ -57,7 +57,12 @@ interface ConfigProviderInterface
     public function getBackButtonText(): ?string;
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getDefaultCookiePath(): string;
+    public function getDefaultCookiePath(): ?string;
+
+    /**
+     * @return string|null
+     */
+    public function getDefaultCookieDomain(): ?string;
 }

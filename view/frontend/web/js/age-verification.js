@@ -8,6 +8,9 @@ define([
         initialize: function (config, data) {
             this.subscribeContinueButton();
             this.subscribeBackButton();
+            this.cookieTtl = parseInt(config.cookie_ttl);
+            this.cookiePath = config.cookie_path;
+            this.cookieDomain = config.cookie_domain;
         },
         subscribeContinueButton: function () {
             let self = this;
@@ -27,7 +30,7 @@ define([
         saveCookie: function () {
             let expireDate = new Date();
             expireDate.setSeconds(expireDate.getSeconds() + this.cookieTtl);
-            $.cookie('j-agever', 'true', {expires: expireDate, path: '/'})
+            $.cookie('j-agever', 'true', {expires: expireDate, path: this.cookiePath, domain: this.cookieDomain})
         },
         hideModal: function () {
             $("#j_ageverification_modal").hide();
