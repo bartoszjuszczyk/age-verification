@@ -26,6 +26,13 @@ if ($block->canShowModal()):
             <p class="modal-description">
                 <?= $escaper->escapeHtml($block->getModalDescription()); ?>
             </p>
+            <?php if($block->getUsingCalendar()): ?>
+            <div class="calendar">
+                <form id="j_ageverification_dob_form">
+                    <input id="j_ageverification_dob_input" class="calendar-input" type="date" data-rule-ageverification="true"/>
+                </form>
+            </div>
+            <?php endif; ?>
             <div class="modal-buttons">
                 <button id="j_agever_continue_btn" class="modal-continue-btn">
                     <?= $escaper->escapeHtml($block->getContinueButtonText()); ?>

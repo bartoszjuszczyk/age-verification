@@ -18,6 +18,7 @@ interface ConfigProviderInterface
     public const string XML_PATH_GENERAL_COOKIE_TTL = 'juszczyk_age_verification/general/cookie_ttl';
     public const string XML_PATH_APPEARANCE_HEADING = 'juszczyk_age_verification/appearance/heading';
     public const string XML_PATH_APPEARANCE_DESCRIPTION = 'juszczyk_age_verification/appearance/description';
+    public const string XML_PATH_APPEARANCE_USING_CALENDAR = 'juszczyk_age_verification/appearance/using_calendar';
     public const string XML_PATH_APPEARANCE_CONTINUE_BUTTON = 'juszczyk_age_verification/appearance/continue_button';
     public const string XML_PATH_APPEARANCE_BACK_BUTTON = 'juszczyk_age_verification/appearance/back_button';
 
@@ -45,6 +46,11 @@ interface ConfigProviderInterface
      * @return string|null
      */
     public function getDescriptionText(): ?string;
+
+    /**
+     * @return bool
+     */
+    public function getUsingCalendar(): bool;
 
     /**
      * @return string|null

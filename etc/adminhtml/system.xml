@@ -21,7 +21,7 @@
                 <field id="cookie_ttl" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" type="text"
                        translate="label">
                     <label>Cookie TTL [s]</label>
-                    <validate>required-entry validate-digits</validate>
+                    <validate>validate-digits</validate>
                     <comment>How many seconds should a cookie that saves consent information live.</comment>
                 </field>
             </group>
@@ -35,12 +35,17 @@
                        translate="label" sortOrder="20">
                     <label>Description Text</label>
                 </field>
-                <field id="continue_button" type="text" showInDefault="1" showInWebsite="1" showInStore="1"
+                <field id="using_calendar" type="select" showInDefault="1" showInWebsite="1" showInStore="1"
                        translate="label" sortOrder="30">
+                    <label>Use Calendar to Verify DOB</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="continue_button" type="text" showInDefault="1" showInWebsite="1" showInStore="1"
+                       translate="label" sortOrder="40">
                     <label>Continue Button Text</label>
                 </field>
                 <field id="back_button" type="text" showInDefault="1" showInWebsite="1" showInStore="1"
-                       translate="label" sortOrder="40">
+                       translate="label" sortOrder="50">
                     <label>Back Button Text</label>
                 </field>
             </group>

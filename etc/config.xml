@@ -11,6 +11,7 @@
             <appearance>
                 <heading>This site is for +18 only!</heading>
                 <description>Do you confirm that you are over 18 years old?</description>
+                <using_calendar>0</using_calendar>
                 <continue_button>Confirm, go to site</continue_button>
                 <back_button>No, go back</back_button>
             </appearance>

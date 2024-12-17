@@ -72,6 +72,11 @@ class Modal extends Template
         return (string) $this->configProvider->getDescriptionText();
     }
 
+    public function getUsingCalendar(): bool
+    {
+        return $this->configProvider->getUsingCalendar();
+    }
+
     /**
      * @return string
      */
