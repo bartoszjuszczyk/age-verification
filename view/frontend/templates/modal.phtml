@@ -44,7 +44,9 @@ if ($block->canShowModal()):
     {
         "*": {
             "Juszczyk_AgeVerification/js/age-verification": {
-                "cookie_ttl": "<?= $block->getCookieTtl(); ?>"
+                "cookie_ttl": "<?= $escaper->escapeJs($block->getCookieTtl()); ?>",
+                "cookie_path": "<?= $escaper->escapeJs($block->getDefaultCookiePath());  ?>",
+                "cookie_domain": "<?= $escaper->escapeJs($block->getDefaultCookieDomain()) ?>"
             }
         }
     }
